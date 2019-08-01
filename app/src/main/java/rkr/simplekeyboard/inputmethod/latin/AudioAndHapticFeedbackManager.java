@@ -58,6 +58,12 @@ public final class AudioAndHapticFeedbackManager {
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
     }
 
+    public void performHapticAndAudioFeedback(final int code,
+                                              final View viewToPerformHapticFeedbackOn) {
+        performHapticFeedback(viewToPerformHapticFeedbackOn);
+        performAudioFeedback(code);
+    }
+
     public boolean hasVibrator() {
         return mVibrator != null && mVibrator.hasVibrator();
     }

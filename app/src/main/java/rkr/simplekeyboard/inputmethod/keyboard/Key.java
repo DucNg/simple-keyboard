@@ -828,6 +828,11 @@ public class Key implements Comparable<Key> {
         mEnabled = enabled;
     }
 
+    // @Nonnull
+    public Rect getHitBox() {
+        return mHitBox;
+    }
+
     /**
      * Detects if a point falls on this key.
      * @param x the x-coordinate of the point

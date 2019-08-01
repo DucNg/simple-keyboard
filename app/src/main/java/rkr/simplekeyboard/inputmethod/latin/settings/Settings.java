@@ -60,6 +60,11 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
     public static final String PREF_SPACE_SWIPE = "pref_space_swipe";
     public static final String PREF_DELETE_SWIPE = "pref_delete_swipe";
 
+    // Emoji
+    public static final String PREF_EMOJI_RECENT_KEYS = "emoji_recent_keys";
+    public static final String PREF_EMOJI_CATEGORY_LAST_TYPED_ID = "emoji_category_last_typed_id";
+    public static final String PREF_LAST_SHOWN_EMOJI_CATEGORY_ID = "last_shown_emoji_category_id";
+
     private static final float UNDEFINED_PREFERENCE_VALUE_FLOAT = -1.0f;
     private static final int UNDEFINED_PREFERENCE_VALUE_INT = -1;
 
@@ -278,4 +283,35 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
         return conf.keyboard != Configuration.KEYBOARD_NOKEYS
                 && conf.hardKeyboardHidden != Configuration.HARDKEYBOARDHIDDEN_YES;
     }
+
+    public static void writeEmojiRecentKeys(final SharedPreferences prefs, String str) {
+        prefs.edit().putString(PREF_EMOJI_RECENT_KEYS, str).apply();
+    }
+
+    public static String readEmojiRecentKeys(final SharedPreferences prefs) {
+        return prefs.getString(PREF_EMOJI_RECENT_KEYS, "");
+    }
+
+    public static void writeLastTypedEmojiCategoryPageId(
+            final SharedPreferences prefs, final int categoryId, final int categoryPageId) {
+        final String key = PREF_EMOJI_CATEGORY_LAST_TYPED_ID + categoryId;
+        prefs.edit().putInt(key, categoryPageId).apply();
+    }
+
+    public static int readLastTypedEmojiCategoryPageId(
+            final SharedPreferences prefs, final int categoryId) {
+        final String key = PREF_EMOJI_CATEGORY_LAST_TYPED_ID + categoryId;
+        return prefs.getInt(key, 0);
+    }
+
+    public static void writeLastShownEmojiCategoryId(
+            final SharedPreferences prefs, final int categoryId) {
+        prefs.edit().putInt(PREF_LAST_SHOWN_EMOJI_CATEGORY_ID, categoryId).apply();
+    }
+
+    public static int readLastShownEmojiCategoryId(
+            final SharedPreferences prefs, final int defValue) {
+        return prefs.getInt(PREF_LAST_SHOWN_EMOJI_CATEGORY_ID, defValue);
+    }
+
 }

@@ -75,4 +75,5 @@
         name="MainKeyboardView"
         parent="KeyboardView" />
     <style name="MoreKeysKeyboardView" />
+    <style name="EmojiPalettesView" />
 </resources>

@@ -86,6 +86,8 @@ public class Keyboard {
 
     private final ProximityInfo mProximityInfo;
 
+    //private final KeyboardLayout mKeyboardLayout;
+
     public Keyboard(final KeyboardParams params) {
         mId = params.mId;
         mThemeId = params.mThemeId;
@@ -109,6 +111,30 @@ public class Keyboard {
         mProximityInfo = new ProximityInfo(params.GRID_WIDTH, params.GRID_HEIGHT,
                 mOccupiedWidth, mOccupiedHeight, mMostCommonKeyWidth,
                 mSortedKeys);
+    }
+
+    protected Keyboard( final Keyboard keyboard) {
+        mId = keyboard.mId;
+        mThemeId = keyboard.mThemeId;
+        mOccupiedHeight = keyboard.mOccupiedHeight;
+        mOccupiedWidth = keyboard.mOccupiedWidth;
+        mBaseHeight = keyboard.mBaseHeight;
+        mBaseWidth = keyboard.mBaseWidth;
+        mMostCommonKeyHeight = keyboard.mMostCommonKeyHeight;
+        mMostCommonKeyWidth = keyboard.mMostCommonKeyWidth;
+        mMoreKeysTemplate = keyboard.mMoreKeysTemplate;
+        mMaxMoreKeysKeyboardColumn = keyboard.mMaxMoreKeysKeyboardColumn;
+        mKeyVisualAttributes = keyboard.mKeyVisualAttributes;
+        mTopPadding = keyboard.mTopPadding;
+        mVerticalGap = keyboard.mVerticalGap;
+
+        mSortedKeys = keyboard.mSortedKeys;
+        mShiftKeys = keyboard.mShiftKeys;
+        mAltCodeKeysWhileTyping = keyboard.mAltCodeKeysWhileTyping;
+        mIconsSet = keyboard.mIconsSet;
+
+        mProximityInfo = keyboard.mProximityInfo;
+        //mKeyboardLayout = keyboard.mKeyboardLayout;
     }
 
     /**

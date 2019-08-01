@@ -176,6 +176,8 @@ public final class Constants {
     // Code value representing the code is not specified.
     public static final int CODE_UNSPECIFIED = -13;
 
+    public static final int CODE_ALPHA_FROM_EMOJI = 1;
+
     public static boolean isLetterCode(final int code) {
         return code >= CODE_SPACE;
     }

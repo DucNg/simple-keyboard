@@ -53,6 +53,23 @@ public final class KeyboardId {
     public static final int ELEMENT_PHONE = 7;
     public static final int ELEMENT_PHONE_SYMBOLS = 8;
     public static final int ELEMENT_NUMBER = 9;
+    public static final int ELEMENT_EMOJI_RECENTS = 10;
+    public static final int ELEMENT_EMOJI_CATEGORY1 = 11;
+    public static final int ELEMENT_EMOJI_CATEGORY2 = 12;
+    public static final int ELEMENT_EMOJI_CATEGORY3 = 13;
+    public static final int ELEMENT_EMOJI_CATEGORY4 = 14;
+    public static final int ELEMENT_EMOJI_CATEGORY5 = 15;
+    public static final int ELEMENT_EMOJI_CATEGORY6 = 16;
+    public static final int ELEMENT_EMOJI_CATEGORY7 = 17;
+    public static final int ELEMENT_EMOJI_CATEGORY8 = 18;
+    public static final int ELEMENT_EMOJI_CATEGORY9 = 19;
+    public static final int ELEMENT_EMOJI_CATEGORY10 = 20;
+    public static final int ELEMENT_EMOJI_CATEGORY11 = 21;
+    public static final int ELEMENT_EMOJI_CATEGORY12 = 22;
+    public static final int ELEMENT_EMOJI_CATEGORY13 = 23;
+    public static final int ELEMENT_EMOJI_CATEGORY14 = 24;
+    public static final int ELEMENT_EMOJI_CATEGORY15 = 25;
+    public static final int ELEMENT_EMOJI_CATEGORY16 = 26;
 
     public final RichInputMethodSubtype mSubtype;
     public final int mWidth;

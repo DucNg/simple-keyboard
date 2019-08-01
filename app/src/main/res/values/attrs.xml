@@ -34,6 +34,8 @@
         <attr name="moreKeysKeyboardViewStyle" format="reference" />
         <!-- MoreKeysKeyboardView style for action key -->
         <attr name="moreKeysKeyboardViewForActionStyle" format="reference" />
+        <!-- EmojiPalettesView style -->
+        <attr name="emojiPalettesViewStyle" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="KeyboardView">
@@ -115,6 +117,31 @@
     </declare-styleable>
 
     <declare-styleable name="MoreKeysKeyboardView">
+    </declare-styleable>
+
+    <declare-styleable name="EmojiPalettesView">
+        <attr name="categoryIndicatorEnabled" format="boolean" />
+        <attr name="categoryIndicatorDrawable" format="reference" />
+        <attr name="categoryIndicatorBackground" format="reference" />
+        <attr name="categoryPageIndicatorColor" format="color" />
+        <attr name="categoryPageIndicatorBackground" format="color" />
+        <attr name="iconEmojiRecentsTab" format="reference" />
+        <attr name="iconEmojiCategory1Tab" format="reference" />
+        <attr name="iconEmojiCategory2Tab" format="reference" />
+        <attr name="iconEmojiCategory3Tab" format="reference" />
+        <attr name="iconEmojiCategory4Tab" format="reference" />
+        <attr name="iconEmojiCategory5Tab" format="reference" />
+        <attr name="iconEmojiCategory6Tab" format="reference" />
+        <attr name="iconEmojiCategory7Tab" format="reference" />
+        <attr name="iconEmojiCategory8Tab" format="reference" />
+        <attr name="iconEmojiCategory9Tab" format="reference" />
+        <attr name="iconEmojiCategory10Tab" format="reference" />
+        <attr name="iconEmojiCategory11Tab" format="reference" />
+        <attr name="iconEmojiCategory12Tab" format="reference" />
+        <attr name="iconEmojiCategory13Tab" format="reference" />
+        <attr name="iconEmojiCategory14Tab" format="reference" />
+        <attr name="iconEmojiCategory15Tab" format="reference" />
+        <attr name="iconEmojiCategory16Tab" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="Keyboard">

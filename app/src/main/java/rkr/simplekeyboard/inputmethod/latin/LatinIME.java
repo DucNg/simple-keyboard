@@ -98,6 +98,10 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     final KeyboardSwitcher mKeyboardSwitcher;
     private final SubtypeState mSubtypeState = new SubtypeState();
 
+    // Working variable for {@link #startShowingInputView()} and
+    // {@link #onEvaluateInputViewShown()}.
+    private boolean mIsExecutingStartShowingInputView;
+
     private AlertDialog mOptionsDialog;
 
     public final UIHandler mHandler = new UIHandler(this);
@@ -664,6 +668,21 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         outInsets.contentTopInsets = visibleTopY;
         outInsets.visibleTopInsets = visibleTopY;
         mInsetsUpdater.setInsets(outInsets);
+    }
+
+    public void startShowingInputView(final boolean needsToLoadKeyboard) {
+        mIsExecutingStartShowingInputView = true;
+        // This {@link #showWindow(boolean)} will eventually call back
+        // {@link #onEvaluateInputViewShown()}.
+        showWindow(true /* showInput */);
+        mIsExecutingStartShowingInputView = false;
+        if (needsToLoadKeyboard) {
+            loadKeyboard();
+        }
+    }
+
+    public void stopShowingInputView() {
+        showWindow(false /* showInput */);
     }
 
     @Override

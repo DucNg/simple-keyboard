@@ -67,4 +67,7 @@
     <integer name="config_max_keyboar_height">150</integer>
     <integer name="config_min_keyboar_height">50</integer>
     <integer name="config_keyboar_height_step">5</integer>
+
+    <!-- Common configuration of Emoji keyboard -->
+    <dimen name="config_emoji_category_page_id_height">2dp</dimen>
 </resources>

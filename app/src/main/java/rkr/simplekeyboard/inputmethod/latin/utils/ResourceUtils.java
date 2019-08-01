@@ -179,6 +179,11 @@ public final class ResourceUtils {
         return matchedAll;
     }
 
+    public static int getDefaultKeyboardWidth(final Resources res) {
+        final DisplayMetrics dm = res.getDisplayMetrics();
+        return dm.widthPixels;
+    }
+
     public static int getKeyboardHeight(final Resources res, final SettingsValues settingsValues) {
         final int defaultKeyboardHeight = getDefaultKeyboardHeight(res);
         float scale = settingsValues.mKeyboardHeightScale;
