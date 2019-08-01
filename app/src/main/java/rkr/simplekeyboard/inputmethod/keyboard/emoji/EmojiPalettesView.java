@@ -153,7 +153,6 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         //       category page indicator background as a workaround.
         iconView.setBackgroundColor(mCategoryPageIndicatorBackground);
         iconView.setImageResource(mEmojiCategory.getCategoryTabIcon(categoryId));
-        iconView.setContentDescription(mEmojiCategory.getAccessibilityDescription(categoryId));
         tspec.setIndicator(iconView);
         host.addTab(tspec);
     }

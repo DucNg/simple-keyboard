@@ -109,25 +109,6 @@ final class EmojiCategory {
             R.styleable.EmojiPalettesView_iconEmojiCategory15Tab,
             R.styleable.EmojiPalettesView_iconEmojiCategory16Tab };
 
-    private static final int[] sAccessibilityDescriptionResourceIdsForCategories = {
-            R.string.spoken_descrption_emoji_category_recents,
-            R.string.spoken_descrption_emoji_category_people,
-            R.string.spoken_descrption_emoji_category_objects,
-            R.string.spoken_descrption_emoji_category_nature,
-            R.string.spoken_descrption_emoji_category_places,
-            R.string.spoken_descrption_emoji_category_symbols,
-            R.string.spoken_descrption_emoji_category_emoticons,
-            R.string.spoken_descrption_emoji_category_flags,
-            R.string.spoken_descrption_emoji_category_eight_smiley_people,
-            R.string.spoken_descrption_emoji_category_eight_animals_nature,
-            R.string.spoken_descrption_emoji_category_eight_food_drink,
-            R.string.spoken_descrption_emoji_category_eight_travel_places,
-            R.string.spoken_descrption_emoji_category_eight_activity,
-            R.string.spoken_descrption_emoji_category_objects,
-            R.string.spoken_descrption_emoji_category_symbols,
-            R.string.spoken_descrption_emoji_category_flags,
-            R.string.spoken_descrption_emoji_category_eight_smiley_people };
-
     private static final int[] sCategoryElementId = {
             KeyboardId.ELEMENT_EMOJI_RECENTS,
             KeyboardId.ELEMENT_EMOJI_CATEGORY1,
@@ -230,10 +211,6 @@ final class EmojiCategory {
 
     public int getCategoryTabIcon(final int categoryId) {
         return mCategoryTabIconId[categoryId];
-    }
-
-    public String getAccessibilityDescription(final int categoryId) {
-        return mRes.getString(sAccessibilityDescriptionResourceIdsForCategories[categoryId]);
     }
 
     public ArrayList<CategoryProperties> getShownCategories() {
