@@ -186,14 +186,14 @@ public class RichInputMethodSubtype {
     }
 
     private static final int SUBTYPE_ID_OF_DUMMY_EMOJI_SUBTYPE = 0xd78b2ed0;
-//    private static final String EXTRA_VALUE_OF_DUMMY_EMOJI_SUBTYPE =
-//            "KeyboardLayoutSet=" + SubtypeLocaleUtils.EMOJI
-//                    + "," + Constants.Subtype.ExtraValue.EMOJI_CAPABLE;
+    private static final String EXTRA_VALUE_OF_DUMMY_EMOJI_SUBTYPE =
+            "KeyboardLayoutSet=" + SubtypeLocaleUtils.EMOJI
+                    + "," + Constants.Subtype.ExtraValue.EMOJI_CAPABLE;
     private static final RichInputMethodSubtype DUMMY_EMOJI_SUBTYPE = new RichInputMethodSubtype(
             InputMethodSubtypeCompatUtils.newInputMethodSubtype(
                     R.string.subtype_emoji, R.drawable.ic_ime_switcher_dark,
                     SubtypeLocaleUtils.NO_LANGUAGE, KEYBOARD_MODE,
-                    null,
+                    EXTRA_VALUE_OF_DUMMY_EMOJI_SUBTYPE,
                     false /* isAuxiliary */, false /* overridesImplicitlyEnabledSubtype */,
                     SUBTYPE_ID_OF_DUMMY_EMOJI_SUBTYPE));
     //private static RichInputMethodSubtype sNoLanguageSubtype;

@@ -87,6 +87,8 @@ public final class Constants {
              */
             public static final String IS_ADDITIONAL_SUBTYPE = "isAdditionalSubtype";
 
+            public static final String EMOJI_CAPABLE = "EmojiCapable";
+
             private ExtraValue() {
                 // This utility class is not publicly instantiable.
             }

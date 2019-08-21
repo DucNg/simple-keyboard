@@ -27,6 +27,7 @@ import rkr.simplekeyboard.inputmethod.R;
 import rkr.simplekeyboard.inputmethod.latin.common.StringUtils;
 
 import static rkr.simplekeyboard.inputmethod.latin.common.Constants.Subtype.ExtraValue.ASCII_CAPABLE;
+import static rkr.simplekeyboard.inputmethod.latin.common.Constants.Subtype.ExtraValue.EMOJI_CAPABLE;
 import static rkr.simplekeyboard.inputmethod.latin.common.Constants.Subtype.ExtraValue.IS_ADDITIONAL_SUBTYPE;
 import static rkr.simplekeyboard.inputmethod.latin.common.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
 import static rkr.simplekeyboard.inputmethod.latin.common.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
@@ -206,6 +207,7 @@ public final class AdditionalSubtypeUtils {
             compatibilityExtraValueItems.add(UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME + "=" +
                     SubtypeLocaleUtils.getKeyboardLayoutSetDisplayName(keyboardLayoutSetName));
         }
+        compatibilityExtraValueItems.add(EMOJI_CAPABLE);
         compatibilityExtraValueItems.add(IS_ADDITIONAL_SUBTYPE);
         final String compatibilityExtraValues = TextUtils.join(",", compatibilityExtraValueItems);
         return Arrays.hashCode(new Object[] {
